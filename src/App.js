@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CustomerForm from './components/CustomerForm/CustomerForm'
+import CustomerList from './components/CustomerList/CustomerList';
+import CustomerDetails from './components/CustomerDetails/CustomerDetails';
+import Header from './components/Header';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+      <Header />
+        <Routes>
+          <Route path="/" element={<CustomerList />} />
+          <Route path="/add-customer" element={<CustomerForm />} />
+          <Route path="/customer/:id" element={<CustomerDetails />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

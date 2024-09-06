@@ -1,0 +1,74 @@
+.customer-list-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.customer-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two customers side by side */
+    gap: 20px; /* Spacing between the cards */
+    margin-top: 20px;
+}
+
+.customer-list-heading {
+    color: #047986;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.customer-card {
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.customer-card p {
+    margin: 5px 0;
+}
+
+.cust-details {
+    color: black;
+    font-family: "Poppins";
+    font-weight: bold;
+}
+
+.number {
+    color: #047986;
+    font-family: "Poppins";
+}
+
+.view-details{
+    text-decoration: none;
+    color: #5b0193c3;
+    font-weight: bold;
+    font-family: "Poppins";
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px;
+    margin: 0 10px;
+    background-color: #047986;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-size: 16px;
+}
